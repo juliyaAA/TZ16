@@ -5,30 +5,28 @@ console.log(block);
 // Задача 2. Выведите на страницу элементы из массива a3, у которых ключ содержит больше 4 символов.
 
 let a3 = {
-    3 : 'hello', 
-    'one' : 'hi',
-    'testt' : 'vodoley',
-    'ivan' : 'ivanov'
+    3: 'hello',
+    'one': 'hi',
+    'testt': 'vodoley',
+    'ivan': 'ivanov'
 };
 for (let key in a3) {
-    if(key.length>4) {
-        console.log(a3[key]);
+    if (key.length > 4) {
+        document.body.innerHTML += '<div >' + (a3[key]) + '</div>';
     }
 }
+
 //  Задача 3.Создайте ассоциативный массив a7, два input (u7-key input, u7-value input) и
 // кнопку.  При  нажатии  кнопки  добавляйте  в  массив  новое  значение  с 
 // соответствующим ключем. Выводите массив на страницу.
 
 let newArray = new Map();
-let button = document.getElementById('button');
-
-button.onclick = function ()
-{
+function addToArray() {
     let key = document.getElementById('u7-key');
     let value = document.getElementById('u7-value');
     newArray.set(key.value, value.value);
     console.log(newArray);
-};
+}
 
 // Задача  4. Создайте  массив  a.  Выведите  длину  массива  a. const  a  =  ['Tor',  'Lokki',  'Odin', 34, 'privet']
 
@@ -39,15 +37,10 @@ console.log(a.length);
 let d = [0, 2, 5, -4, 6, 22, -9, -12, 13, 78];
 let a1 = [];
 let a2 = [];
-// const call1 = document.getElementById('call1');
-// const call2 = document.getElementById('call2');
-for(var j=0; j<=d.length; j++)
-{
-    if ((d[j] % 2) == 0)
-        {
-            a1.push(d[j]);
-            
-    } else{
+for (var j = 0; j <= d.length; j++) {
+    if ((d[j] % 2) == 0) {
+        a1.push(d[j]);
+    } else {
         a2.push(d[j]);
     }
 }
@@ -57,6 +50,6 @@ document.body.innerHTML += '<div >' + a2 + '</div>';
 // Задача 6. Используя d = [0, 2, 5, -4, 6, 22, -9, -12, 13, 78] и цикл - выведите значение из массива.
 
 let dd = [0, 2, 5, -4, 6, 22, -9, -12, 13, 78];
-for(var i=0; i<d.length; i++) {
+for (var i = 0; i < d.length; i++) {
     console.log(dd[i]);
 }
